@@ -236,7 +236,7 @@ nav ul li a:hover {
   }
 }
 /* Increase max width and font sizes on large screens */
-@media (min-width: 2000px) {
+@media (min-width: 1900px) {
   .feature-box {
     max-width: 27rem; /* bigger boxes */
     padding: 3rem;
