@@ -238,16 +238,23 @@ nav ul li a:hover {
 /* Increase max width and font sizes on large screens */
 @media (min-width: 1400px) {
   .feature-box {
-    max-width: 30rem; /* bigger boxes */
-    padding: 1.5rem;
+    max-width: 27rem; /* bigger boxes */
+    padding: 3rem;
   }
   
+  .feature-box img {
+    max-width: 100%;
+  }
+
   .feature-box h2 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 
   .welcome-section h1 {
     font-size: 4rem;
+  }
+  .game img {
+    max-width: 80%;
   }
 
   .welcome-section p {
@@ -265,5 +272,5 @@ nav ul li a:hover {
 }
 
 .feature-box h2 {
-  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.25rem, 2.5vw, 4rem);
 }
