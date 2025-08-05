@@ -235,3 +235,35 @@ nav ul li a:hover {
     max-width: 80%;
   }
 }
+/* Increase max width and font sizes on large screens */
+@media (min-width: 1200px) {
+  .feature-box {
+    max-width: 30rem; /* bigger boxes */
+    padding: 1.5rem;
+  }
+  
+  .feature-box h2 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 4rem;
+  }
+
+  .welcome-section p {
+    font-size: 2rem;
+  }
+}
+
+/* Use clamp for smooth font scaling on all screens */
+.welcome-section h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.welcome-section p {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+.feature-box h2 {
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+}
