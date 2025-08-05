@@ -8,15 +8,25 @@
 </head>
 <body>
   <!--Integrated Chatbot-->
-  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      intent="WELCOME"
-      chat-title="StressSense Chat"
-      agent-id="7e54bd7c-06a3-4482-976f-c48c4d01bf41"
-      language-code="en"
-      chat-open="true"
-      expand = true
-    ></df-messenger>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1">
+  </script>
+  <style>
+  df-messenger {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    transform: translateX(50%) translateY(50%);
+    bottom: -90px;
+  }
+  </style>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="StressSense"
+    agent-id="7e54bd7c-06a3-4482-976f-c48c4d01bf41"
+    language-code="en"
+    expand = "true"
+  ></df-messenger>
 
 <!--Navigation Bar-->
   <nav>
