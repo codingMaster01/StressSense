@@ -2,7 +2,7 @@
 body {
   margin: 0 auto;
   background-color: #94ee9b;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 1rem;
 }
