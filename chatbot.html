@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href = "index.css" />
+    <link rel = "stylesheet" href = "chatbot.css" />
 </head>
 <body>
-    <!--Integrated Chatbot-->
-      <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-      <df-messenger
-        intent="WELCOME"
-        chat-title="StressSense Chat"
-        agent-id="7e54bd7c-06a3-4482-976f-c48c4d01bf41"
-        language-code="en"
-      ></df-messenger>
+  <!--Integrated Chatbot-->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="StressSense Chat"
+      agent-id="7e54bd7c-06a3-4482-976f-c48c4d01bf41"
+      language-code="en"
+      chat-open="true"
+      expand = true
+    ></df-messenger>
 
 <!--Navigation Bar-->
   <nav>

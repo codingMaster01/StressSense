@@ -1,18 +1,6 @@
 body {
     margin: auto;
-    background-color: #ebf3a3;
-}
-
-/* Chatbot */
-df-messenger {
-  --df-messenger-width: 500px; /* Increase this value to make it wider */
-  --df-messenger-font-color: #000;
-  --df-messenger-chat-background-color: #f0fff0; /* optional */
-  --df-messenger-button-titlebar-color: #ff9933; /* optional */
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
+    background-color: #94ee9b;
 }
 
 /* Navigation Bar */
@@ -25,7 +13,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 16px 32px;
-  background-color: forestgreen;
+  background-color: darkgreen;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -44,7 +32,7 @@ nav ul {
 
 nav ul li a {
   font-family: Comic Sans MS;
-  color: #ffefaf;
+  color: #caf0a7;
   text-decoration: underline;
   font-size: 30px;
   font-weight: 800;
@@ -101,4 +89,96 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #e0f2fe;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Welcome Section */
+.welcome-section {
+  margin-top: -80px;
+  text-align: center;
+  padding: 80px 20px;
+  font-family: Comic Sans MS;
+}
+
+.welcome-section h1 {
+  font-size: 60px;
+  color: forestgreen;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.welcome-section p {
+  margin-top: -1px;
+  font-size: 35px;
+  color: darkslategray;
+}
+
+/* Boxes */
+/* Features container */
+.features-section {
+  margin-top: -100px;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+/* Each box */
+.feature-box {
+  width: 400px;
+  height: 400px;
+  background-color: #caf0a7;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 40px 20px;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Titles */
+.feature-box h2 {
+  font-family: Comic Sans MS;
+  font-size: 45px;
+  color: forestgreen;
+  margin-bottom: -10px;
+}
+
+/* Image container styling */
+.chatbot img {
+  max-width: 300px;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+.game img {
+  max-width: 300px;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+.contact img {
+  max-width: 300px;
+  height: auto;
+  margin-top: 110px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+/* Chatbot */
+df-messenger {
+  --df-messenger-bot-message: lightgreen;
+  --df-messenger-button-titlebar-color: white;
+  --df-messenger-chat-background-color: #f0fff0; /* optional */
+  --df-messenger-button-titlebar-color: green; /* optional */
 }

@@ -1,6 +1,6 @@
 body {
     margin: auto;
-    background-color: #ebf3a3;
+    background-color: #94ee9b;
     overflow: hidden;
 }
 
@@ -33,7 +33,7 @@ nav ul {
 
 nav ul li a {
   font-family: Comic Sans MS;
-  color: #ffefaf;
+  color: #caf0a7;
   text-decoration: underline;
   font-size: 30px;
   font-weight: 800;
@@ -128,7 +128,7 @@ nav ul li a:hover {
 .feature-box {
   width: 400px;
   height: 400px;
-  background-color: #ffefaf;
+  background-color: #caf0a7;
   border-radius: 70px;
   display: flex;
   flex-direction: column;
