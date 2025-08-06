@@ -100,3 +100,56 @@ nav ul li a:hover {
   font-size: 1.5rem;
   display: flex;
 }
+
+/* Game Grid */
+.game-grid {
+  margin: 0 auto;   /* centers the grid container horizontally */
+  display: grid;
+  grid-template-columns: repeat(3, 0.2fr);
+  gap: 1.5rem;
+  padding: 2rem 4rem;
+  justify-items: center;
+  justify-content: center; /* centers the grid columns as a whole */
+}
+
+.game-card {
+  background-color: #b4e9bf;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 100%;
+  max-width: 18rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: center; 
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.1); /* scales up 5% */
+  z-index: 10;   
+}
+
+.game-card a {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* inherits the color from h3 */
+}
+
+.game-card h3 {
+  padding-bottom: 2rem;
+  color: darkgreen;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.game-card img {
+  width: 100%;
+  max-width: 10rem;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 0.5rem;
+}
