@@ -75,29 +75,6 @@ nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 0.625rem 1rem;
-  color: #f8fafc;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.6);
-  transition: 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #e0f2fe;
-  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.8);
-}
 
 /* Welcome Section */
 .welcome-section {
