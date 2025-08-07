@@ -4,7 +4,6 @@ html, body {
 }
 canvas {
   display: block;
-  scale: 2;
   margin: 100px auto 0; /* centers horizontally and adds 40px margin on top */
   border: 2px solid white; /* optional, for visibility */
 }
@@ -50,10 +49,14 @@ nav  a:hover {
         gap: 10px
     }
     
-    @media (max-width: 1900) {
-    canvas {
+    @media (max-width: 1900px) {
+    .game-board {
+      margin-top: 0px;
       scale: 0.9;
       }
+    canvas {
+      margin-top: 0px;
+    }
      }
 
     /* Card Styles */

@@ -9,7 +9,7 @@ canvas {
   scale: 1.4;
 }
 
-@media (max-width: 1900) {
+@media (max-width: 1900px) {
   canvas {
     scale: 1.1;
   }

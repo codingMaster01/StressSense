@@ -110,6 +110,7 @@ nav ul li a:hover {
   padding: 2rem 4rem;
   justify-items: center;
   justify-content: center; /* centers the grid columns as a whole */
+  margin-bottom: 3%;
 }
 
 .game-card {

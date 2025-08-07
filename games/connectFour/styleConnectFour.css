@@ -9,6 +9,12 @@ canvas {
   margin: 100px auto 0; /* centers horizontally and adds 40px margin on top */
 }
 
+@media (max-width: 1900px) {
+  canvas {
+    margin-top: 10px;
+  }
+}
+
 /* Navigation Bar */
 nav {
   margin: 0 auto;

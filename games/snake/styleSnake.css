@@ -8,11 +8,7 @@ canvas {
   margin: 100px auto 0; /* centers horizontally and adds 40px margin on top */
   border: 2px solid white; /* optional, for visibility */
 }
-@media (max-width: 1900) {
-  canvas {
-    scale: 0.9;
-  }
-}
+
 /* Navigation Bar */
 nav {
   margin: 0 auto;
@@ -39,4 +35,11 @@ nav a{
 nav  a:hover {
   color: #93c5fd;
   text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1900px) {
+  canvas {
+    margin-top: 0rem;
+    scale: 0.9;
+  }
 }
