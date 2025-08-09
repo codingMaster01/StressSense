@@ -78,16 +78,16 @@ nav ul li a:hover {
 
 /* Welcome Section */
 .welcome-section {
-  margin-top: -3rem; /* reduced from -5rem */
+  margin-top: -3rem; 
   text-align: center;
-  padding: 3rem 1rem; /* reduced padding */
+  padding: 3rem 1rem;
 }
 
 .welcome-section h1 {
   font-size: 3rem;
   color: forestgreen;
   font-weight: 900;
-  margin-bottom: 0.75rem; /* reduced margin */
+  margin-bottom: 0.75rem;
 }
 
 .welcome-section p {
@@ -98,11 +98,11 @@ nav ul li a:hover {
 
 /* Features Section */
 .features-section {
-  margin-top: -4rem; /* reduced from -6rem */
+  margin-top: -4rem;
   display: flex;
   justify-content: center;
-  gap: 3rem; /* reduced from 3rem */
-  padding: 2rem 1rem; /* reduced padding */
+  gap: 3rem;
+  padding: 2rem 1rem; 
   flex-wrap: wrap;
 }
 
@@ -215,7 +215,7 @@ nav ul li a:hover {
 /* Increase max width and font sizes on large screens */
 @media (min-width: 1900px) {
   .feature-box {
-    max-width: 27rem; /* bigger boxes */
+    max-width: 27rem;
     padding: 3rem;
   }
   

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "books.css" />
+</head>
+<body>
+
+  <!--Navigation Bar-->
+  <nav>
+    <a href="index.html">
+        <img src="images/StressSenseLogo.png" alt="Logo" class="logo" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="games.html">Calming Games</a></li>
+      <li><a href="books.html">Relaxing Books</a></li>
+      <li><a href="contact.html">Contact/Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <h1>Unwind and Read!</h1>
+  </section>
+
+  <!--Instructions-->
+  <section class="Instructions">
+    <p>Welcome to your personal reading retreat. Here you'll find a handpicked collection of gentle, uplifting, and dyslexic-friendly books designed to bring peace, comfort, and inspiration. Whether you’re seeking a quiet escape, a moment of reflection, or simply a soothing story to end your day, these reads offer a warm embrace for the mind and soul. Settle in, turn the page, and let your stress melt away.</p>
+  </section>
+
+  <!--Book List-->
+  <div class="book-grid">
+
+    <div class="book-card" onclick="openSummary(0)">
+      <h3>Flu Shot Fidgets</h3>
+      <img src="images/book1.jpg" alt="Book 1">
+  </div>
+
+  <div class="book-card" onclick="openSummary(1)">
+      <h3>Camping Chaos</h3>
+      <img src="images/book2.jpg" alt="Book 2">
+  </div>
+
+  <div class="book-card" onclick="openSummary(2)">
+      <h3>Hyper To Max</h3>
+      <img src="images/book3.jpg" alt="Book 3">
+  </div>
+
+  <div class="book-card" onclick="openSummary(3)">
+      <h3>Missing Moon</h3>
+      <img src="images/book4.jpg" alt="Book 4">
+  </div>
+
+  <div class="book-card" onclick="openSummary(4)">
+      <h3>Cookie King</h3>
+      <img src="images/book5.jpg" alt="Book 5">
+  </div>
+
+  <div class="book-card" onclick="openSummary(5)">
+      <h3>School Trip</h3>
+      <img src="images/book6.jpg" alt="Book 6">
+  </div>
+
+  <div class="book-card" onclick="openSummary(6)">
+      <h3>The Puffin Portal</h3>
+      <img src="images/book7.jpg" alt="Book 7">
+  </div>
+
+  <div class="book-card" onclick="openSummary(7)">
+      <h3>The Griffin Gate</h3>
+      <img src="images/book8.jpg" alt="Book 8">
+  </div>
+
+  <div class="book-card" onclick="openSummary(8)">
+      <h3>Everest</h3>
+      <img src="images/book9.jpg" alt="Book 9">
+  </div>
+</div>
+
+ <!--Summary-->
+  <div id="summaryBox" class="summary-box" style="display:none;">
+    <p id="summaryText"></p>
+    <button onclick = "closeSummary()">Close</button>
+    <button id = "readButton">Click Here to Buy</button>
+  </div> 
+
+<!--Functionality-->
+<script>
+    const books = [
+      {summary: "Max calms his fears about getting a needle at the doctor's office by playing a game that involves all the animals on the farm. Can he make it out of the office without everyone thinking he's coming down with more than the fidgets? Flu Shot Fidgets uses Dyslexia-friendly Typefaces and formatting.", link: "https://www.amazon.com/Shot-Fidgets-Secret-Games-Maximus/dp/1459504348"},
+      {summary: "Max and his friends are on a camping trip at Camp Friendly Pines when he's stung by a wasp. Max gets a case of the Super Fidgets and devises a counting game to distract himself. If he loses, he will have to forfeit his campfire treats! It's not easy being a kid. And Max discovers that his games don't always work out the way he wants them to. But no matter what, he has the love and understanding of his friends.", link: "https://www.amazon.com/Camping-Crazies-Secret-Games-Maximus/dp/1459505832"},
+      {summary: "Max invents a game to keep the super fidgets at bay for the day. He'll need to rhyme every reply he gives, and with Mandy Beth trying her best to trip him up, it isn't easy! Hyper to the Max uses Dyslexia-friendly Typefaces and formatting.", link: "https://www.amazon.com/Hyper-Secret-Games-Maximus-Todd/dp/1459504194#:~:text=Book%20details&text=Max%20invents%20a%20game%20to,Dyslexia%2Dfriendly%20Typefaces%20and%20formatting."},
+      {summary: "As Quinnelope is getting ready for bed one night, she discovers that the moon is mysteriously missing from the sky. Weird . . . BUT it’s the perfect opportunity to pull an all-nighter. (Err, an “all-dayer” actually, since the sun is still up!) Except hours later, there’s still no moon", link: "https://www.amazon.com/Quinnelope-Mystery-Missing-Moon-2/dp/1637154399"},
+      {summary: "Quinnelope wakes up one morning to learn all the cookies in her kingdom have gone missing. Dun dun DuUuuUUuUUUnNN!!!! The bakery and grocery store aisles are full of cakes but NO COOKIES. What is a cookie-obsessed queen supposed to do?!", link: "https://www.amazon.com/Quinnelope-Cookie-King-Catastrophe-Vol/dp/1637152345"},
+      {summary: "Grace’s family are wardens of the incredible Griffin Map, using its teleport technology to fight crime across Moreland. Right now it’s all systems go at Griffin HQ, where Grace, her mum and her brother have their hands full answering a huge number of calls for help", link: "https://www.amazon.com/gp/product/1781129819/ref=x_gr_bb_amazon?ie=UTF8&tag=x_gr_bb_amazon-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1781129819&SubscriptionId=1MGPYB6YW3HWK55XCGG2"},
+      {summary: "Max gets a case of the Super Fidgets on a school trip to the art gallery. He decides to focus on the color green to distract himself. It's not easy but he's determined to win the challenge he has set. Max finds that while it's not always easy being a kid ― especially if you're a bit different ― inspiration sometimes strikes at the most unexpected times.", link: "https://www.amazon.com/School-Squirmies-Secret-Games-Maximus/dp/1459505875"},
+      {summary: "Warden Griffin at your service. Can I ask if you've seen a monster in the area ...? Grace's family are wardens of the Griffin Map, using its teleport technology to fight crime across Moreland. Although Grace is still too young, she longs to go on missions herself.", link: "https://www.amazon.com/The-Griffin-Gate/dp/1781129436"},
+      {summary: "Everest is the world’s highest mountain, towering like an icy giant over the Himalayas. For the millions of people living nearby, it has always been a magical place, known as “Goddess Mother of the World” or the Peak of Heaven.", link: "https://example.com/book9https://www.amazon.com/Everest-Reaching-Everyone-Reader-Nonfiction/dp/1454958502"}
+    ];
+
+    function openSummary(index) {
+      document.getElementById("summaryText").innerText = books[index].summary;
+      let readBtn = document.getElementById("readButton");
+      readBtn.onclick = function() {
+        window.open(books[index].link, "_blank");
+      };
+      document.getElementById("summaryBox").style.display = "block";
+    }
+
+    function closeSummary() {
+        document.getElementById("summaryBox").style.display = "none";
+    }
+</script>
+</body>
+</html>

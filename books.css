@@ -102,7 +102,7 @@ nav ul li a:hover {
 }
 
 /* Game Grid */
-.game-grid {
+.book-grid {
   margin: 0 auto;   
   display: grid;
   grid-template-columns: repeat(3, 0.2fr);
@@ -113,13 +113,14 @@ nav ul li a:hover {
   margin-bottom: 3%;
 }
 
-.game-card {
+.book-card {
   background-color: #b4e9bf;
   border-radius: 0.75rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
   padding: 1rem;
   width: 100%;
   max-width: 18rem;
+  max-height: 25rem;
   aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
@@ -129,28 +130,65 @@ nav ul li a:hover {
   transition: transform 0.2s ease;
 }
 
-.game-card:hover {
+.book-card:hover {
   transform: scale(1.1); 
   z-index: 10;   
 }
 
-.game-card a {
+.book-card a {
   text-decoration: none;   
   color: inherit;         
 }
 
-.game-card h3 {
+.book-card h3 {
   padding-bottom: 2rem;
   color: darkgreen;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-.game-card img {
-  width: 100%;
-  max-width: 10rem;
-  height: auto;
+.book-card img {
+  width: 10rem;
+  height: 15rem;
   display: block;
   margin: 0.5rem auto 0;
   border-radius: 0.5rem;
+}
+
+
+/* Summary Box */
+.summary-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 30rem;
+  padding: 1.5rem;
+  background: #caf0a7;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transform: translate(-50%, -40%);
+  text-align: center;
+  z-index: 10000;
+}
+
+.summary-box p {
+  margin-bottom: 1rem;
+  color: #234d20;
+  font-size: 1.5rem;
+}
+
+.summary-box button {
+  background-color: forestgreen;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.summary-box button:hover {
+  background-color: #1a3a12;
 }
