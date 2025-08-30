@@ -103,3 +103,8 @@ nav  a:hover {
         background-position: center;;
         background-size: contain;;
     }
+@media (max-width: 1200px) {
+ body {
+  scale: 0.8;
+ }
+}

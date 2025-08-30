@@ -43,3 +43,8 @@ nav  a:hover {
     scale: 0.9;
   }
 }
+@media (max-width: 1200px) {
+ body {
+  scale: 0.8;
+ }
+}

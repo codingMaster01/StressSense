@@ -156,15 +156,8 @@ iframe {
   padding-left: 35rem;
 }
 
-@media (max-width: 600px) {
-  .contact-box {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-
-  .contact-image {
-    margin: 1rem 0 0;
-  }
+@media (max-width: 1200px) {
+ body {
+  scale: 0.8;
+ }
 }
-

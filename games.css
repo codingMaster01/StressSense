@@ -154,3 +154,9 @@ nav ul li a:hover {
   margin: 0.5rem auto 0;
   border-radius: 0.5rem;
 }
+
+@media (max-width: 1200px) {
+ body {
+  scale: 0.8;
+ }
+}

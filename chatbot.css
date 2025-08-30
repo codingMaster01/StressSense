@@ -200,3 +200,8 @@ df-messenger {
     margin-top: -8rem;
   }
 }
+@media (max-width: 1200px) {
+ body {
+  scale: 0.8;
+ }
+}

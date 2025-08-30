@@ -239,6 +239,12 @@ nav ul li a:hover {
   }
 }
 
+@media (max-width: 1200px) {
+ body {
+  scale: 0.8;
+ }
+}
+
 /* Use clamp for smooth font scaling on all screens */
 .welcome-section h1 {
   font-size: clamp(2rem, 5vw, 4rem);

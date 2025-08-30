@@ -192,3 +192,9 @@ nav ul li a:hover {
 .summary-box button:hover {
   background-color: #1a3a12;
 }
+
+@media (max-width: 1200px) {
+ body {
+  scale: 0.8;
+ }
+}
