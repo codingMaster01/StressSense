@@ -1,4 +1,4 @@
-/* Base */
+/* Base Styles */
 body {
   margin: 0 auto;
   background-color: #94ee9b;
@@ -17,20 +17,20 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem; /* smaller vertical padding */
   background-color: darkgreen;
   box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.3);
 }
 
 nav .logo {
-  height: 5rem;
+  height: clamp(3rem, 5vw, 5rem);
   box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2.25rem;
+  gap: clamp(1.25rem, 2vw, 2.5rem); /* slightly bigger gap for readability */
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -38,10 +38,9 @@ nav ul {
 }
 
 nav ul li a {
-  font-family: "Comic Sans MS", cursive, sans-serif;
   color: #caf0a7;
   text-decoration: underline;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 1.7vw, 1.4rem); /* slightly larger text */
   font-weight: 800;
   padding: 0.4rem 0.75rem;
   border-radius: 0.375rem;
@@ -54,62 +53,38 @@ nav ul li a:hover {
   text-shadow: 0.0625rem 0.0625rem 0.125rem rgba(0, 0, 0, 0.8);
 }
 
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #9acd32;
-  padding: 0.5rem 0;
-  min-width: 11.25rem;
-  border-radius: 0.375rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(0.5rem);
-  transition: all 0.3s ease;
-}
-
-
 /* Welcome Section */
 .welcome-section {
-  margin-top: -3rem; 
   text-align: center;
-  padding: 3rem 1rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 1rem; /* reduced vertical padding */
 }
 
 .welcome-section h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   color: forestgreen;
   font-weight: 900;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem; /* smaller gap */
 }
 
 .welcome-section p {
-  margin-top: 0;
-  font-size: 1.75rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* slightly smaller text */
   color: darkslategray;
+  margin-top: 0;
 }
 
 /* Features Section */
 .features-section {
-  margin-top: -4rem;
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  padding: 2rem 1rem; 
+  gap: clamp(1.5rem, 3vw, 3rem);
+  padding: clamp(1.5rem, 3vw, 2rem) 1rem;
   flex-wrap: wrap;
 }
 
 /* Feature Box */
 .feature-box {
   width: 90%;
-  max-width: 22rem;
+  max-width: clamp(18rem, 25vw, 22rem);
   aspect-ratio: 1 / 1;
   background-color: #caf0a7;
   border-radius: 2rem;
@@ -121,7 +96,7 @@ nav ul li a:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
-  padding: 1rem;
+  padding: clamp(0.75rem, 2vw, 1rem);
 }
 
 .feature-box:hover {
@@ -130,130 +105,98 @@ nav ul li a:hover {
 }
 
 .feature-box h2 {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 2.25rem;
+  font-size: clamp(1.25rem, 2vw, 2rem);
   color: forestgreen;
   margin: 0.5rem 0 0.25rem;
 }
 
+.feature-box p {
+  font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+}
+
 /* Images inside boxes */
 .feature-box img {
-  max-width: 80%;
+  max-width: clamp(60%, 20vw, 80%);
   height: auto;
   margin: 0.5rem 0;
   object-fit: contain;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+
+/* Medium screens (tablets & small laptops) */
+@media (max-width: 1024px) {
   nav {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-  }
-
-  nav ul {
-    justify-content: center;
+    gap: 0.75rem;
   }
 
   nav .logo {
-    height: 4rem;
+    height: clamp(3rem, 6vw, 4rem);
   }
+}
 
+/* Small screens (phones) */
+@media (max-width: 768px) {
   nav ul li a {
-    font-size: 1.25rem;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
   }
 
   .welcome-section h1 {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
   }
 
   .welcome-section p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.4rem);
   }
 
   .features-section {
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
+    gap: clamp(1rem, 3vw, 1.5rem);
+    padding: clamp(1rem, 3vw, 1.5rem) 1rem;
   }
 
   .feature-box {
     max-width: 80vw;
-    padding: 0.75rem;
-  }
-
-  .feature-box h2 {
-    font-size: 1.5rem;
-  }
-
-  .feature-box img {
-    max-width: 70%;
+    padding: clamp(0.5rem, 2vw, 0.75rem);
   }
 }
 
+/* Extra small screens */
 @media (max-width: 480px) {
-  nav ul li a {
-    font-size: 1rem;
+  .feature-box h2 {
+    font-size: clamp(1rem, 4vw, 1.5rem);
   }
 
   .welcome-section h1 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
   }
 
   .welcome-section p {
-    font-size: 1.25rem;
-  }
-
-  .feature-box h2 {
-    font-size: 1.25rem;
-  }
-
-  .feature-box img {
-    max-width: 80%;
+    font-size: clamp(0.9rem, 3vw, 1.25rem);
   }
 }
-/* Increase max width and font sizes on large screens */
+
+/* Large screens */
 @media (min-width: 1900px) {
   .feature-box {
     max-width: 27rem;
     padding: 3rem;
   }
-  
-  .feature-box img {
-    max-width: 100%;
-  }
 
   .feature-box h2 {
-    font-size: 4rem;
+    font-size: 3rem;
+  }
+
+  .feature-box img {
+    max-width: 100%;
   }
 
   .welcome-section h1 {
     font-size: 4rem;
   }
-  .game img {
-    max-width: 80%;
-  }
 
   .welcome-section p {
     font-size: 2rem;
   }
-}
-
-@media (max-width: 1200px) {
- body {
-  scale: 0.8;
- }
-}
-
-/* Use clamp for smooth font scaling on all screens */
-.welcome-section h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
-}
-
-.welcome-section p {
-  font-size: clamp(1.25rem, 3vw, 2rem);
-}
-
-.feature-box h2 {
-  font-size: clamp(1.25rem, 2.5vw, 4rem);
 }
